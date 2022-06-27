@@ -1,24 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import { CssBaseline, Box, Container } from "@mui/material";
+import Footer from "components/Footer";
+import Header from "components/Header";
+import LocationCards from "components/LocationCards";
+import OptionsTab from "components/OptionsTab";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  
+      <>
+        <CssBaseline>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              height: "100vh",
+            }}
+          >
+            <Box>
+              <Header />
+              <OptionsTab />
+            </Box>
+
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                flexGrow: 1,
+                height: 100,
+                overflowY: "scroll",
+              }}
+            >
+              <Container
+                maxWidth="xl"
+                sx={{
+                  mb: 3,
+                }}
+              >
+                <LocationCards />
+              </Container>
+            </Box>
+
+            <Box>
+              <Footer/>
+            </Box>
+          </Box>
+        </CssBaseline>
+      </>
   );
 }
 
