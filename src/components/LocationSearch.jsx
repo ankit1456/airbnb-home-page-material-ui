@@ -43,7 +43,7 @@ const LocationSearch = () => {
                     mr: 1,
                   }}
                 >
-                  <IoSearchCircleSharp color={pink[500]} size={32}  />
+                  <IoSearchCircleSharp color={pink[500]} size={32} />
                 </Box>
               )}
             </Button>
